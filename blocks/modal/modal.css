@@ -1,0 +1,113 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal dialog {
+  overscroll-behavior: none;
+  border: none;
+}
+
+.modal dialog .modal-content {
+  overflow-y: auto;
+  overscroll-behavior: none;
+  &:has(.text-modal){
+  border-radius: 5px;
+  padding: 3.2em;
+  background: var(--gray);
+}}
+
+
+@media (width >= 901px) {
+  .modal dialog {
+    width: 66%;
+    max-width: 1600px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+  }
+  .modal dialog .modal-content {
+    max-height: calc(100vh - 90px);
+  }
+}
+
+@media (width <= 900px) {
+  .modal dialog {
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .modal dialog .modal-content {
+    max-height: calc(100vh - 90px);
+  }
+}
+
+.modal dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.modal .close-button {
+  position: absolute;
+  top: 3px;
+  right: 12px;
+  max-width: 20px;
+  outline: none;
+  /* height: 100%; */
+  max-height: 36px;
+  border-radius: 20px;
+  /* background-color: unset; */
+  background-color: rgba(0, 0, 0, 0);
+  text-overflow: clip;
+  margin: 0;
+  border: none;
+  padding-right: 30px;
+  /* transition: color 0.5s ease; */
+  :after {
+    /* font-family: 'sasicons-103018' !important;
+    content: "\e60d"; */
+    content: '\2715';
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1;
+    /* -webkit-font-smoothing: antialiased; */
+    font-size: 2rem;
+    position: absolute;
+    padding: 5px;
+    top: 2px;
+    left: 10px;
+    /* background: var(--blue); */
+    background: rgba(3, 120, 205, 1);
+    border-radius: 18px;
+    border: 1px solid #ffffff;
+  }
+  :hover {
+    &:after {
+      background: var(--orange);
+    }
+  }
+}
+
+.modal dialog .section {
+  padding: 0;
+}
+
+.icon-close img {
+  display: none;
+}
+
+.background-white {
+  div {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 2.4rem;
+  }
+}
+
+.image-center {
+  p:has(picture) {
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+}

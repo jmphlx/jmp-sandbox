@@ -1,0 +1,240 @@
+.table {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2.4rem 0;
+  &.table {
+    th {
+      text-align: center;
+    }
+    tr {
+      background-color: #f7f7f7;
+    }
+    td {
+      border-bottom: 1px solid #e7e7e7;
+      padding: 10px;
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+  &.text-center {
+    tbody tr td {
+      text-align: center;
+    }
+  }
+  &.table-fit-content {
+    table {
+      width: fit-content !important;
+      @media (width <=600px) {
+        width: 100% !important;
+      }
+    }
+  }
+  &.table-width-25 {
+    table {
+      width: 25% !important;
+      @media (width <=600px) {
+        width: 100% !important;
+      }
+    }
+  }
+  &.table-width-50 {
+    table {
+      width: 50% !important;
+      @media (width <=600px) {
+        width: 100% !important;
+      }
+    }
+  }
+  &.table-width-75 {
+    table {
+      width: 75% !important;
+      @media (width <=600px) {
+        width: 100% !important;
+      }
+    }
+  }
+  &.data-only {
+    table, tr:last-child{
+      border: 1px solid #e7e7e7 !important;
+    }
+    > table th {
+      border-bottom: 1px solid #e7e7e7 !important;
+      text-align: left !important;
+      font-family: var(--font-primary);
+    }
+    > table td {
+      border-bottom: 1px solid #e7e7e7 !important;
+    }
+    > table tr:last-child td {
+      border-bottom: 1px solid #e7e7e7 !important;
+    }
+    > table tr {
+      border-bottom: 0 !important;
+    }
+  }
+  &.agenda-table {
+    margin: 1em 0 2em 0;
+    border: 1px solid #E7E7E7;
+    background-color: #F7F7F7;
+    box-sizing: border-box;
+    tr{
+      vertical-align:top;
+    }
+    p{
+      margin-bottom:0;
+    }
+    th {
+      border: 0
+    }
+    td:first-child {
+      width: 20%;
+    }
+    td {
+      border: 0;
+      border-bottom: 1px solid #E7E7E7;
+      text-align: left;
+    }
+    tbody tr {
+      border: 0;
+    }
+    :first-child > tr {
+      color: var(--white);
+      background-color: var(--blue);
+      border: none;
+      strong {
+        color: #ffffff;
+      }
+    }
+    > table thead tr, > table tbody tr {
+      border-top: none;
+      border-bottom: 1px solid #E7E7E7;
+    }
+  }
+}
+.table table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-xs);
+}
+@media (width >=600px) {
+  .table table {
+    font-size: var(--body-font-size-s);
+  }
+}
+@media (width >=900px) {
+  .table table {
+    font-size: var(--body-font-size-s);
+  }
+}
+.table table thead tr {
+  border: 1px solid;
+  border-bottom: 2px solid;
+  font-family: var(--font-secondary);
+  h3 {
+    margin-bottom: 0 !important;
+    font-size: var(--heading-font-size-s);
+  }
+}
+.table table tbody tr {
+  border: 1px solid;
+}
+.table table th {
+  font-weight: 700;
+  border: 1px solid #d0d0d0;
+}
+.table table th, .table table thead tr td {
+  padding: 1rem;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
+}
+.table table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #e7e7e7;
+  p {
+    margin-bottom: 0;
+  }
+}
+/* no header variant */
+.table.no-header table tbody tr {
+  border: 1px solid;
+}
+/* striped variant */
+.table.striped {
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f7f7f7 !important;
+    }
+    tr:nth-child(odd) {
+      background-color: #f1f1f1 !important;
+    }
+  }
+}
+
+/* bordered variant */
+.table.bordered table th, .table.bordered table td {
+  border: 1px solid;
+}
+.MJXp-math {
+  line-height: .25;
+  font-size: clamp(1.3rem, 1.7vw + 1rem, 2.4rem);
+}
+.header-blue {
+  thead {
+    td {
+      color: #ffffff;
+    }
+    tr {
+      background-color: var(--blue) !important;
+      color: var(--blue);
+      th {
+        p {
+          color: #ffffff !important;
+          strong {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+/* Sets the width of the first column in a table */
+.table-first-col20{
+  td:first-child {
+    width: 20%;
+  }
+}
+.table-first-col25{
+  td:first-child {
+    width: 25%;
+  }
+}
+.table-first-col30{
+  td:first-child {
+    width: 30%;
+  }
+}
+.table-first-col35{
+  td:first-child {
+    width: 35%;
+  }
+}
+.table-first-col40{
+  td:first-child {
+    width: 40%;
+  }
+}
+.table-first-col45{
+  td:first-child {
+    width: 45%;
+  }
+}
+.table-first-col50{
+  td:first-child {
+    width: 50%;
+  }
+}

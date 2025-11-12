@@ -1,0 +1,117 @@
+@import url("/styles/listgroup.css");
+
+ul.assetList {
+  margin: 0;
+  padding: 0;
+  columns: 2;
+}
+
+div.listgroup-asset  {
+  padding-top: 0;
+}
+
+.listgroup-asset ul.assetList li {
+  clear: both;
+  list-style-type: none;
+  padding: 0;
+  float: left;
+  a {
+    text-align: left;
+  }
+}
+
+.listgroup-asset ul.assetList {
+  > li {
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-in-out;
+    a {
+      background: transparent;
+      margin: 0;
+      height: 100%;
+      width: auto;
+      text-decoration: none;
+      position: relative;
+      outline: none;
+      .title {
+        order: 2;
+        font-family: "anova-regular", "Arial", "Helvetica", sans-serif;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin: 0;
+        transition: color 0.5s ease;
+        color: var(--blue) !important;
+      }
+    }
+    :hover {
+      .title {
+        color: var(--blue);
+      }
+    }
+  }
+  > li:hover {
+    /* transform: translateY(-5px); */
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.listgroup-center {
+  ul {
+    justify-content: center;
+  }
+}
+
+.listgroup-asset >h1, .listgroup-asset >h2, .listgroup-asset >h3, .listgroup-asset >h4, .listgroup-asset >h5, .listgroup-asset >h6 {
+  margin-bottom: 0.5em;
+}
+
+.asset-blocks {
+  ul.assetList {
+    padding: 0;
+    margin-left: 0;
+    columns: 2;
+    > li {
+      width: 100%;
+      float: none;
+      break-inside: avoid-column;
+      a {
+        width: 100%;
+        display: block;
+        position: relative;
+        outline: none;
+        overflow: hidden;
+        padding: 1rem 1.6rem;
+        border-radius: var(--base-radius);
+        border: 1px solid rgba(0, 0, 0, 0);
+        margin: 0 0 1rem 0;
+        background-color: var(--gray);
+        box-sizing: border-box;
+        text-decoration: none;
+        transition: all 0.5s ease;
+        span {
+          &:before {
+            content: url('../../../icons/arrow-orange.svg');
+            width: 7px;
+            display: inline-block;
+            font-size: 80%;
+            margin: 0 5px 0 0;
+          }
+        }
+        &:hover {
+          border: 1px solid var(--blue);
+          span {
+            color: var(--link-hover-color);
+          }
+        }
+      }
+    }
+  }
+  @media (width <=900px) {
+    ul.assetList {
+      columns: 1;
+      > li {
+        width: unset;
+      }
+    }
+  }
+}

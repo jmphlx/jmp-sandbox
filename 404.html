@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Not Found | JMP</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="Page Not Found">
+    <meta property="og:description" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@JMP_software">
+    <meta name="twitter:title" content="Page Not Found">
+    <meta name="twitter:description" content="">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/aem.js" type="module"></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script type="module">
+      import { createTag } from '/scripts/helper.js';
+      import { getLanguage } from '/scripts/jmp.js';
+      const lang = getLanguage();
+      const fragPath = `/${lang}/fragments/404`;
+      const fullPath = `https://main--jmp-da--jmphlx.hlx.live${fragPath}`;
+      document.getElementById('fragment').setAttribute('href', fragPath);
+      document.getElementById('fragment').innerText = fullPath;
+
+      const headElem = document.querySelector('head');
+      const ogURL = createTag('meta', {
+        property: 'og:url',
+        content: fullPath,
+      });
+      const defaultMetaImage = `${window.location.origin}/icons/jmp-com-share.jpg`;
+      const ogImg = createTag('meta', {
+        property: 'og:image',
+        content: defaultMetaImage,
+      });
+      const canonLink = createTag('link', {
+        rel: 'canonical',
+        href: fullPath
+      });
+      headElem.prepend(canonLink, ogURL, ogImg);
+
+    </script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="fragment unwrap">
+          <div>
+            <div><a id="fragment"></a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

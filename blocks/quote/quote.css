@@ -1,0 +1,93 @@
+.quote blockquote {
+  /* max-width: 1084px; */
+  display: block;
+  padding: 0 0 3.2rem 0;
+  margin: 0;
+  .quote-quotation {
+    p, h1, h2, h3, h4, h5 {
+      font-family: "anova-light", "Arial", "Helvetica", sans-serif;
+      font-weight: normal;
+      font-size: 2.8rem;
+      color: #643695;
+      margin: 32px auto;
+      position: relative;
+      padding: 0;
+      line-height: 1.25em;
+    }
+  }
+  .quote-attribution {
+    text-align: center;
+    padding: 0;
+    color: #333333;
+    p {
+      margin-bottom: 0;
+      line-height: 1.5;
+      font-size: 16px;
+      color: #333333
+    }
+  }
+}
+div.quote-small .quote-quotation {
+  p, h1, h2, h3, h4, h5 {
+    font-size: 1.9rem;
+  }
+}
+.quote blockquote .quote-quotation > :first-child:before, .quote blockquote .quote-quotation > :last-child:after {
+  content: "";
+  font-family: "Georgia", cursive;
+  line-height: 0;
+  /* font-size: 800%; */
+  font-size: 17.0rem;
+  width: 0;
+  height: 0;
+  position: absolute;
+  color: #f2f2f2;
+  z-index: -1;
+}
+.quote blockquote .quote-quotation > :first-child:before {
+  content: '\201C';
+  width: 1em;
+  /* top: 0;
+  left: -16px; */
+}
+* *.quote blockquote .quote-quotation > :last-child:after {
+  content: '\201D';
+  /* bottom: -0.175em;
+  right: 105px; */
+  margin: 80px 0 0 -40px;
+}
+.img-float-right {
+  p {
+    font-size: 1.9rem !important;
+    color: #333333 !important;
+    line-height: 1.35 !important;
+  }
+  img {
+    float: right;
+    border-radius: 50%;
+    width: 35%;
+    min-width: 275px;
+    margin: 0 0 1rem 3rem;
+  }
+  @media (width <=600px) {
+    img {
+      float: none;
+    }
+  }
+}
+.quote-rule {
+  border-top: 1px solid var(--grayRule);
+  border-bottom: 1px solid var(--grayRule);
+  margin: 3.2rem 0;
+}
+
+.quote{
+  &.text-light{
+    p, h1, h2, h3, h4, h5 {
+    color: #ffffff !important;
+    }
+    :first-child:before, :first-child:after {
+      color: rgba(220, 220, 220, .5) !important;
+    }
+  }
+}
