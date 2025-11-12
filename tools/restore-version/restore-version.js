@@ -208,7 +208,7 @@ function createResultHeader() {
 window.addEventListener('message', (event) => {
   if (event.origin === 'http://localhost:3000'
     || event.origin === 'https://www.jmp.com'
-    || event.origin === 'https://main--jmp-da--jmphlx.aem.live') {
+    || event.origin === 'https://main--jmp-sandbox--jmphlx.aem.live') {
     const singleInput = document.getElementById('page-path-input');
     if (event.data.length) {
       singleInput.value = event.data;

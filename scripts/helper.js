@@ -45,10 +45,10 @@ export const DA_CONSTANTS = {
   versionUrl: 'https://admin.da.live/versionsource',
   editUrl: 'https://da.live/edit#',
   aemUrl: 'https://admin.hlx.page/status',
-  mainUrl: 'https://main--jmp-da--jmphlx.aem.live',
-  previewUrl: 'https://main--jmp-da--jmphlx.aem.page',
+  mainUrl: 'https://main--jmp-sandbox--jmphlx.aem.live',
+  previewUrl: 'https://main--jmp-sandbox--jmphlx.aem.page',
   org: 'jmphlx',
-  repo: 'jmp-da',
+  repo: 'jmp-sandbox',
 };
 
 export function replaceHtml(text) {

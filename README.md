@@ -2,9 +2,9 @@
 This is the migration site for www.jmp.com on Edge Delivery running against Dark Alley.  
 
 ## Environments
-- Develop: https://develop--jmp-da--jmphlx.hlx.page/ (Design Development)
-- Preview: https://main--jmp-da--jmphlx.hlx.page/
-- Live: https://main--jmp-da--jmphlx.hlx.live/
+- Develop: https://develop--jmp-sandbox--jmphlx.hlx.page/ (Design Development)
+- Preview: https://main--jmp-sandbox--jmphlx.hlx.page/
+- Live: https://main--jmp-sandbox--jmphlx.hlx.live/
 
 ## Installation
 

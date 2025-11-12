@@ -1,6 +1,6 @@
 const languagesAPAC = ['ko', 'ja', 'zh-hans', 'zh-hant'];
 const languagesAMER = ['en', 'es', 'fr', 'de', 'it'];
-const baseURL = 'https://main--jmp-da--jmphlx.hlx.live';
+const baseURL = 'https://main--jmp-sandbox--jmphlx.hlx.live';
 
 function getRegionalLanguageIndexes(includeFullURL, regionalIndexes) {
   const indexPaths = [];
@@ -51,15 +51,15 @@ async function getPastEventsPages(languageIndexes) {
 }
 
 async function sendDeleteRequest(authToken, page, deindex) {
-  //'https://admin.hlx.page/index/jmphlx/jmp-da/main/en/online-statistics-course/request-access-to-teaching-materials/download-teaching-materials' 
+  //'https://admin.hlx.page/index/jmphlx/jmp-sandbox/main/en/online-statistics-course/request-access-to-teaching-materials/download-teaching-materials' 
 
   console.log(authToken);
   console.log(page);
   let url;
   if (deindex) {
-    url = `https://admin.hlx.page/index/jmphlx/jmp-da/main${page}`;
+    url = `https://admin.hlx.page/index/jmphlx/jmp-sandbox/main${page}`;
   } else {
-    url = `https://admin.hlx.page/live/jmphlx/jmp-da/main${page}`;
+    url = `https://admin.hlx.page/live/jmphlx/jmp-sandbox/main${page}`;
   }
 
   try {
@@ -112,7 +112,7 @@ function buildEmailBody(successPages, failedPages, region) {
     emailBody += '<div style="color:red;">These pages were not unpublished: </div>';
     emailBody += '<ul>';
     failedPages.forEach((page) => {
-      emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-da${page}">${page}</a></li>`;
+      emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-sandbox${page}">${page}</a></li>`;
     });
     emailBody += '</ul></div>';
 
@@ -121,7 +121,7 @@ function buildEmailBody(successPages, failedPages, region) {
       emailBody += '<div style="color:green;">These pages were successfully unpublished: </div>';
       emailBody += '<ul>';
       successPages.forEach((page) => {
-        emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-da${page}">${page}</a></li>`;
+        emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-sandbox${page}">${page}</a></li>`;
       });
       emailBody += '</ul></div>';
     }
@@ -130,7 +130,7 @@ function buildEmailBody(successPages, failedPages, region) {
     emailBody += '<div style="color:green;">These pages were successfully unpublished: </div>';
     emailBody += '<ul>';
     successPages.forEach((page) => {
-      emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-da${page}">${page}</a></li>`;
+      emailBody += `<li><a href="https://da.live/edit#/jmphlx/jmp-sandbox${page}">${page}</a></li>`;
     });
     emailBody += '</ul></div>';
   } else {

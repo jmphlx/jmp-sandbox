@@ -3,9 +3,9 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 Fix #<gh-issue-id>
 
 Test URLs:
-- Before: https://main--jmp-da--jmphlx.hlx.live/
-- After: https://branch--jmp-da--jmphlx.hlx.live/
+- Before: https://main--jmp-sandbox--jmphlx.hlx.live/
+- After: https://branch--jmp-sandbox--jmphlx.hlx.live/
 
 URL for testing:
 
-- https://{branch}--jmp-da--jmphlx.hlx.page/
+- https://{branch}--jmp-sandbox--jmphlx.hlx.page/

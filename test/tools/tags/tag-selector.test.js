@@ -8,7 +8,7 @@ describe('Tag Selector Plugin Tests', () => {
   it('Fetch tags', async () => {
     const project = {
       org: 'jmphlx',
-      repo: 'jmp-da',
+      repo: 'jmp-sandbox',
     };
     const dts = new DaTagSelector();
     dts.project = project;
@@ -38,7 +38,7 @@ describe('Tag Selector Plugin Tests', () => {
     const savedFetch = window.fetch;
     try {
       window.fetch = async (url, opts) => {
-        if (url === 'https://admin.da.live/source/jmphlx/jmp-da/tools/tagbrowser/mytags.json'
+        if (url === 'https://admin.da.live/source/jmphlx/jmp-sandbox/tools/tagbrowser/mytags.json'
           && opts.headers.Authorization === 'Bearer foobar') {
           return fetchResp;
         }
@@ -128,7 +128,7 @@ describe('Tag Selector Plugin Tests', () => {
   it('Single select tags', async () => {
     const project = {
       org: 'jmphlx',
-      repo: 'jmp-da',
+      repo: 'jmp-sandbox',
     };
     const dts = new DaTagSelector();
     dts.project = project;
@@ -187,7 +187,7 @@ describe('Tag Selector Plugin Tests', () => {
     const savedFetch = window.fetch;
     try {
       window.fetch = async (url) => {
-        if (url === 'https://admin.da.live/source/jmphlx/jmp-da/tools/tagbrowser/mytags.json') {
+        if (url === 'https://admin.da.live/source/jmphlx/jmp-sandbox/tools/tagbrowser/mytags.json') {
           return fetchResp;
         }
         return null;
