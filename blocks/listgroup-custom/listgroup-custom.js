@@ -8,6 +8,7 @@ import {
   getJsonFromUrl,
   getLanguageIndex,
   getLanguage,
+  getTagPropertyConverted,
   isTagProperty,
   sortPageList,
   filterOutRobotsNoIndexPages,
@@ -88,7 +89,7 @@ function createCardHTML(prop, item) {
   let span;
   const dateProperty = isDateProperty(prop);
   if (isTagProperty(prop)) {
-    span = `<span class="${prop}">${writeOutTagProperties(prop, item)}</span>`;
+    span = `<span class="${prop}">${writeOutTagProperties(getTagPropertyConverted(prop), item)}</span>`;
   } else if (prop === 'image' || prop === 'displayImage') {
     span = writeImagePropertyInList(prop, item);
   } else if (dateProperty >= 0) {
@@ -250,25 +251,24 @@ function writeAsAZGroups(matching, groupBy, groupProperty, blockObj) {
 
 function constructDictionary(matching, filterBy) {
   let filterField = filterBy;
+  let filterStringValue = filterBy;
   const includesTagProperty = checkForTagProperties([filterBy]);
   if (includesTagProperty) {
     filterField = 'tags';
+    filterStringValue = getTagPropertyConverted(filterBy);
   }
   const dictionary = matching.reduce((filterGroups, page) => {
     const lcPage = lowercaseObj(page);
     const filterValue = lcPage[filterField.toLowerCase()];
     // is filterValue a list of values.
     if (Array.isArray(filterValue)) {
-     const reducedTags = filterValue.filter(item => item.includes(filterBy));
-     reducedTags.forEach((tag) => {
-      let tagVal = tag;
-      if (window.tagtranslations) {
-        tagVal = window.tagtranslations[tag] ? window.tagtranslations[tag] : tag;
-      } 
-      if (filterGroups[tagVal.trim()]) filterGroups[tagVal.trim()].push(page);
-      else filterGroups[tagVal.trim()] = [page];
-     });
-    // is filterValue a list of values.  
+      const reducedTags = filterValue.filter((item) => item.includes(filterStringValue));
+      reducedTags.forEach((tag) => {
+        const tagVal = tag;
+        if (filterGroups[tagVal.trim()]) filterGroups[tagVal.trim()].push(page);
+        else filterGroups[tagVal.trim()] = [page];
+      });
+    // is filterValue a list of values.
     } else if (filterValue && filterValue.indexOf(',') > 0) {
       const filterValueArray = filterValue.split(',');
       filterValueArray.forEach((val) => {
@@ -297,31 +297,46 @@ async function constructDropdown(dictionary, filterBy, defaultFilterOption, tran
   const allDropdownItem = createTag('option', { value: '' });
   allDropdownItem.textContent = defaultFilterOption || 'Select';
   filterDropdown.append(allDropdownItem);
+  const includesTagProperty = checkForTagProperties([filterBy]);
 
   let sortedList = Object.keys(dictionary).sort();
-  console.log(sortedList);
   let useTranslation;
   if (translateFilter !== undefined) {
     const pageLanguage = getLanguage();
     const data = await getJsonFromUrl(translateFilter);
-    console.log(data);
     const { data: translations } = data[pageLanguage];
     useTranslation = translations[0];
     sortedList = Object.keys(dictionary)
       .sort((a, b) => (useTranslation[a] < useTranslation[b] ? -1 : 1));
   }
 
+  if (includesTagProperty && window.tagtranslations) {
+    const pageLanguage = getLanguage();
+    sortedList = Object.keys(dictionary)
+      .sort((a, b) => window.tagtranslations[a]
+        .localeCompare(window.tagtranslations[b], pageLanguage, {
+          sensitivity: 'base',
+          numeric: true,
+          ignorePunctuation: true,
+        }));
+  }
+
   sortedList.forEach((filterValue) => {
-    if (filterValue.length > 0) {
+    let useFilterValue = filterValue;
+    if (includesTagProperty && window.tagtranslations) {
+      useFilterValue = window.tagtranslations[filterValue]
+        ? window.tagtranslations[filterValue] : filterValue;
+    }
+    if (useFilterValue.length > 0) {
       const dropdownItem = createTag('option', { value: `${filterValue}` });
       if (useTranslation) {
-        if (useTranslation[filterValue]) {
-          dropdownItem.innerText = useTranslation[filterValue];
+        if (useTranslation[useFilterValue]) {
+          dropdownItem.innerText = useTranslation[useFilterValue];
         } else {
-          dropdownItem.innerText = filterValue;
+          dropdownItem.innerText = useFilterValue;
         }
       } else {
-        dropdownItem.innerText = filterValue;
+        dropdownItem.innerText = useFilterValue;
       }
       filterDropdown.append(dropdownItem);
     }
@@ -331,11 +346,16 @@ async function constructDropdown(dictionary, filterBy, defaultFilterOption, tran
 }
 
 function applyFilter(matching, filterBy, filterValue) {
+  let filterField = filterBy;
+  const includesTagProperty = checkForTagProperties([filterBy]);
+  if (includesTagProperty) {
+    filterField = 'tags';
+  }
   const filteredData = matching.filter((item) => {
     const lcPage = lowercaseObj(item);
     // Need to check if it is an array and contains
     const conditionObject = {
-      property: filterBy,
+      property: filterField,
       value: filterValue,
     };
     return containsOperator(lcPage, conditionObject);

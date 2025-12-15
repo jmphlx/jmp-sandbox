@@ -45,10 +45,10 @@ export const DA_CONSTANTS = {
   versionUrl: 'https://admin.da.live/versionsource',
   editUrl: 'https://da.live/edit#',
   aemUrl: 'https://admin.hlx.page/status',
-  mainUrl: 'https://main--jmp-sandbox--jmphlx.aem.live',
-  previewUrl: 'https://main--jmp-sandbox--jmphlx.aem.page',
+  mainUrl: 'https://main--jmp-da--jmphlx.aem.live',
+  previewUrl: 'https://main--jmp-da--jmphlx.aem.page',
   org: 'jmphlx',
-  repo: 'jmp-sandbox',
+  repo: 'jmp-da',
 };
 
 export function replaceHtml(text) {
@@ -149,6 +149,7 @@ export async function getPageStatus(path, token) {
       return {
         live: result.live.status,
         preview: result.preview.status,
+        lastPublished: result.live.lastModified,
       };
     }
     return {
