@@ -14,13 +14,6 @@
       "titleI18n": { "en": "Experimentation" },
       "environments": [ "dev", "preview" ],
       "event": "experimentation"
-    },
-    {
-      "id": "aemtags",
-      "title": "AEM Tags",
-      "environments":  ["da-edit"],
-      "experience": "dialog",
-      "path": "/tools/tagpicker.html"
     }
   ]
 }
