@@ -1,0 +1,57 @@
+{
+  "code": {
+    "owner": "jmphlx",
+    "repo": "jmp-sandbox",
+    "source": {
+      "type": "github",
+      "url": "https://github.com/jmphlx/jmp-sandbox"
+    }
+  },
+  "content": {
+    "source": {
+      "type": "markup",
+      "url": "https://content.da.live/jmphlx/jmp-sandbox/"
+    },
+    "contentBusId": "e84e03c13cb647363cff1b1d9e0d475682e25752ead556d3bd0e8031ed6"
+  },
+  "lastModified": "2025-12-22T22:07:15.829Z",
+  "created": "2025-12-22T22:06:28.914Z",
+  "version": 3,
+  "access": {
+    "admin": {
+      "role": {
+        "admin": [
+          "laurel.timko@jmp.com",
+          "tad@arborydigital.com"
+        ]
+      },
+      "requireAuth": "auto"
+    }
+  },
+  "sidekick": {
+    "project": "jmp-sandbox",
+    "editUrlLabel": "Document Authoring",
+    "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
+    "plugins": [
+      {
+        "id": "datepicker",
+        "title": "Date Picker",
+        "environments": [
+          "da-edit"
+        ],
+        "path": "/tools/datepicker.html"
+      },
+      {
+        "id": "experimentation",
+        "titleI18n": {
+          "en": "Experimentation"
+        },
+        "environments": [
+          "dev",
+          "preview"
+        ],
+        "event": "experimentation"
+      }
+    ]
+  }
+}
