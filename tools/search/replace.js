@@ -16,9 +16,16 @@ function replaceKeyword(text, keyword, replacement) {
   return text.replaceAll(regex, replacement);
 }
 
-async function doReplace(token, dom, elements, pageSourceUrl, queryObject, classStyle) {
+async function doReplace(
+  token,
+  dom,
+  elements,
+  pageSourceUrl,
+  queryObject,
+  classStyle,
+  replaceText,
+) {
   const keyword = queryObject.keyword;
-  const replaceText = document.querySelector('[name="replaceText"]').value;
 
   if (classStyle === 'attribute') {
     // Replace only the attribute.
@@ -45,16 +52,16 @@ async function doReplace(token, dom, elements, pageSourceUrl, queryObject, class
       el.innerHTML = replaceKeyword(el.innerHTML, keyword, replaceText);
     });
   }
-
   const html = dom.body.querySelector('main');
   saveToDa(html.innerHTML, pageSourceUrl, token);
 }
 
-function resetDocumentsToOriginalState(token) {
-  window.searchResults.forEach((result) => {
+async function resetDocumentsToOriginalState(token) {
+  const resetPromises = window.searchResults.map((result) => {
     const htmlToUse = result.original.querySelector('main');
-    saveToDa(htmlToUse.innerHTML, result.pagePath, token);
+    return saveToDa(htmlToUse.innerHTML, result.pagePath, token);
   });
+  await Promise.all(resetPromises);
 }
 
 function findLine(parentEl, propertyName) {
