@@ -19,7 +19,7 @@ DA natively supports page versioning and comparisons, but Page Rewind streamline
 - Visual diff view – Identify what changed between two versions
 - Fast restore workflow – Revert to a prior version
 - Scalability - Restore multiple pages at once
-- Integrates with [Page Tree Viewer app](https://github.com/jmphlx/jmp-da/tree/main/tools/pagetree) - allow author to navigate through content to find target
+- Integrates with [Page Tree Viewer app](https://github.com/jmphlx/jmp-sandbox/tree/main/tools/pagetree) - allow author to navigate through content to find target
 
 ## 🖼️ Screenshots
 

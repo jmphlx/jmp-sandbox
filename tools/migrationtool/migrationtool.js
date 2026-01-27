@@ -112,7 +112,7 @@ const resourceTypeTagMap = [
 
 function replaceHtml(text) {
   let inner = text;
-  const fromOrigin = 'https://main--jmp-da--jmphlx.aem.live';
+  const fromOrigin = 'https://main--jmp-sandbox--jmphlx.aem.live';
   inner = text
     .replaceAll('./media', `${fromOrigin}/media`)
     .replaceAll('href="/', `href="${fromOrigin}/`);

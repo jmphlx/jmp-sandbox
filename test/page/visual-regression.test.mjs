@@ -2,9 +2,9 @@ import { chromium } from 'playwright';
 import { expect } from '@esm-bundle/chai';
 import { capture, compareScreenshots } from './visual-helpers.mjs';
 
-const BASE = 'http://main--jmp-da--jmphlx.aem.page';
+const BASE = 'http://main--jmp-sandbox--jmphlx.aem.page';
 const BRANCH = process.env.GIT_BRANCH || 'feature-test';
-const PREVIEW = `http://${BRANCH.replace(/\//g, '-') }--jmp-da--jmphlx.aem.page`;
+const PREVIEW = `http://${BRANCH.replace(/\//g, '-') }--jmp-sandbox--jmphlx.aem.page`;
 
 const pages = [
   '/en/home',
