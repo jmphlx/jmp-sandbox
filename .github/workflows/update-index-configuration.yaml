@@ -17,6 +17,6 @@ jobs:
         env:
           AUTH_TOKEN: ${{ secrets.CONFIG_AUTH_TOKEN }}
           CONFIG_PATH: config/query.yaml
-          CONFIG_NAME: query.yaml
+          CONFIG_NAME: content/query.yaml
         run: node scripts/update-configs.mjs
 
