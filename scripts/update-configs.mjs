@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 
 export default async function sendPostRequest(authToken, yamlText, configType) {
-  const url = `https://admin.hlx.page/config/jmphlx/sites/jmp-sandbox/content/${configType}`;
+  const url = `https://admin.hlx.page/config/jmphlx/sites/jmp-sandbox/${configType}`;
 
   try {
     const response = await fetch(url, {

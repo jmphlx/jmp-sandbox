@@ -17,6 +17,6 @@ jobs:
         env:
           AUTH_TOKEN: ${{ secrets.CONFIG_AUTH_TOKEN }}
           CONFIG_PATH: config/sitemap.yaml
-          CONFIG_NAME: sitemap.yaml
+          CONFIG_NAME: content/sitemap.yaml
         run: node scripts/update-configs.mjs
 
