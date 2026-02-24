@@ -3,13 +3,20 @@ import fs from 'node:fs/promises';
 export default async function sendPostRequest(authToken, yamlText, configType) {
   const url = `https://admin.hlx.page/config/jmphlx/sites/jmp-sandbox/${configType}`;
 
+  let contentType = 'text/yaml';
+  if (configType.indexOf('.txt') > 0) {
+    contentType = 'text/plain'
+  } else if (configType.indexOf('.json') > 0) {
+    contentType = 'application/json';
+  }
+
   try {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Authorization': `token ${authToken}`,
         'Accept': '*/*',
-        'Content-Type': 'text/yaml',
+        'Content-Type': contentType,
       }, 
       body: yamlText,
     });
