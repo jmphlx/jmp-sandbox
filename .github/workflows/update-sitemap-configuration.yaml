@@ -1,0 +1,22 @@
+name: Update Sitemap Configuration File
+on:
+  workflow_dispatch:
+
+jobs:
+  updateConfig:
+    environment:
+      name: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run update script
+        env:
+          AUTH_TOKEN: ${{ secrets.CONFIG_AUTH_TOKEN }}
+          CONFIG_PATH: config/sitemap.yaml
+          CONFIG_NAME: sitemap.yaml
+        run: node scripts/update-configs.mjs
+

@@ -3,7 +3,6 @@ import fs from 'node:fs/promises';
 export default async function sendPostRequest(authToken, yamlText, configType) {
   const url = `https://admin.hlx.page/config/jmphlx/sites/jmp-sandbox/content/${configType}`;
 
-  console.log(url);
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -14,14 +13,9 @@ export default async function sendPostRequest(authToken, yamlText, configType) {
       }, 
       body: yamlText,
     });
-    console.log(response);
 
     if (!response.ok) return null;
-    console.log(response);
-    const json = await response.json();
-    console.log(json);
-    return json;
-
+    return response;
   } catch (error) {
     console.error('post request: ', { error });
   }
