@@ -1,4 +1,4 @@
-# Robots.txt file for www.jmp.com
+# Robots.txt file for www.jmp.com SANDBOX
 User-agent: *
 Allow: /
 SITEMAP: https://www.jmp.com/en/sitemap.xml
