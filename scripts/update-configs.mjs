@@ -26,6 +26,7 @@ const configPath = process.env.CONFIG_PATH;
 const configName = process.env.CONFIG_NAME;
 
 const yamlText = await fs.readFile(configPath, 'utf8');
+console.log(yamlText);
 
 const result = await sendPostRequest(authToken, yamlText, configName);
 console.log(result);
