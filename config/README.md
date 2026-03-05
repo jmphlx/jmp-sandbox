@@ -30,6 +30,15 @@ The robots configuration is stored in **robots.txt**. To push updates to the rob
 5. Above the previously run workflows, select Run workflow. Make sure the Branch is set to main. Then click Run workflow.
 6. When the workflow completes successfully, verify using https://tools.aem.live/tools/robots-edit/index.html that the corresponding robots changes are live.
 
+## Headers
+The headeres configuration is stored in **headers.json**. To push updates to the headers file:
+1. Make changes to /config/headers.json.
+2. Open a PR in GitHub and have it reviewed.
+3. Once the PR is reviewed and merged, go to Actions.
+4. From the left rail, select Update Headers Configuration File.
+5. Above the previously run workflows, select Run workflow. Make sure the Branch is set to main. Then click Run workflow.
+6. When the workflow completes successfully, verify using https://tools.aem.live/tools/version-admin/index.html?org=jmphlx&site=jmp-sandbox&type=site that the corresponding headers changes are live in the site version.
+
 ## Site.json
 The version of our site configuration is stored **/config/site.json**. However, we do not push updates to this file. This is to keep a record of the site before making major configuration changes.  To update the site.json file to reflect the latest version of the site:
 1. Navigate to GitHub.
