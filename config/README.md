@@ -31,7 +31,7 @@ The robots configuration is stored in **robots.txt**. To push updates to the rob
 6. When the workflow completes successfully, verify using https://tools.aem.live/tools/robots-edit/index.html that the corresponding robots changes are live.
 
 ## Headers
-The headeres configuration is stored in **headers.json**. To push updates to the headers file:
+The headers configuration is stored in **headers.json**. To push updates to the headers file:
 1. Make changes to /config/headers.json.
 2. Open a PR in GitHub and have it reviewed.
 3. Once the PR is reviewed and merged, go to Actions.
