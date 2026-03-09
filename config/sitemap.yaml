@@ -1,6 +1,5 @@
 version: 2
 
-sitemaps:
   site:
     origin: https://www.jmp.com
     lastmod: YYYY-MM-DD
@@ -45,7 +44,7 @@ sitemaps:
         destination: /zh-hant/sitemap.xml
         hreflang: zh-hant
         alternate: /zh-hant/{path}
-      zh-hans
+      zh-hans:
         source: /jmp-zh-hans.json
         destination: /zh-hans/sitemap.xml
         hreflang: zh-hans
