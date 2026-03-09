@@ -45,13 +45,5 @@ sitemaps:
         destination: /zh-hant/sitemap.xml
         hreflang: zh-hant
         alternate: /zh-hant/{path}
-      zh-hans:
-        source: /jmp-zh-hans.json
-        destination: /zh-hans/sitemap.xml
-        hreflang: zh-hans
-        alternate: /zh-hans/{path}
-      noah-language:
-        source: /jmp-noah-language.json
-        destination: /noah-language/sitemap.xml
-        hreflang: noah-language
-        alternate: /noah-language/{path}
+
+
