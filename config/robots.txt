@@ -10,4 +10,3 @@ SITEMAP: https://www.jmp.com/ko/sitemap.xml
 SITEMAP: https://www.jmp.com/ja/sitemap.xml
 SITEMAP: https://www.jmp.com/zh-hant/sitemap.xml
 SITEMAP: https://www.jmp.com/zh-hans/sitemap.xml
-Stupidmap: https://www.jmp.com/zh-hans/sitemap.xml
