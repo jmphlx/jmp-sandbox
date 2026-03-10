@@ -1,0 +1,158 @@
+"bot_name","request_user_agent",count
+ChatGPT,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",3578
+BitSight,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36 BitSightBot/1.0",1159
+BingBot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/116.0.1938.76 Safari/537.36",1055
+Bytespider,"Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)",899
+Googlebot,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.132 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",707
+"Generic Bot","meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",619
+"Amazon Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot) Chrome/119.0.6045.214 Safari/537.36",290
+"Generic Bot","Mozilla/5.0 (compatible; Qwantbot/1.0_4890776; +https://help.qwant.com/bot/)",282
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",278
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",275
+"aHrefs Bot","Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)",261
+Applebot,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)",232
+"Facebook External Hit","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0",195
+"Generic Bot","meta-webindexer/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)",186
+"Generic Bot","Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; TikTokSpider; ttspider-feedback@tiktok.com)",181
+"MJ12 Bot","Mozilla/5.0 (compatible; MJ12bot/v1.4.8; http://mj12bot.com/)",150
+"MJ12 Bot","Mozilla/5.0 (compatible; MJ12bot/v2.0.5; http://mj12bot.com/)",150
+"Skype URI Preview","Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5 skype-url-preview@microsoft.com",134
+"Facebook External Hit","facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",106
+"Generic Bot","Mozilla/5.0 (Supabase Paired Crawler HTTP/2)",95
+BingBot,"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",83
+Googlebot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GoogleOther) Chrome/144.0.7559.132 Safari/537.36",83
+"LinkedIn Bot","LinkedInBot/1.0 (compatible; Mozilla/5.0; Apache-HttpClient +http://www.linkedin.com)",82
+"Yeti/Naverbot","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Yeti/1.1; +https://naver.me/spd) Chrome/140.0.0.0 Safari/537.36",80
+Googlebot,"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",76
+BingBot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/100.0.4896.127 Safari/537.36",75
+"Petal Bot","Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",66
+Iframely,"Iframely/1.3.1 (+https://iframely.com/docs/about) Atlassian",65
+"Semrush Bot","Mozilla/5.0 (compatible; SemrushBot/7~bl; +http://www.semrush.com/bot.html)",65
+serpstatbot,"serpstatbot/2.1 (advanced backlink tracking bot; https://serpstatbot.com/; abuse@serpstatbot.com)",63
+"Generic Bot",YisouSpider,61
+"Generic Bot","DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)",60
+"Generic Bot","Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity",60
+"Generic Bot","quillbot.com",58
+Bytespider,"Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; https://zhanzhang.toutiao.com/)",56
+"Generic Bot","Mozilla/5.0 (compatible; Thinkbot/0.5.8; +In_the_test_phase,_if_the_Thinkbot_brings_you_trouble,_please_block_its_IP_address._Thank_you.)",53
+BingBot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/136.0.0.0 Safari/537.36",50
+"Generic Bot","""Xpanse-bot",44
+Siteimprove,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 LinkCheck by Siteimprove.com",42
+"Sogou Spider","Sogou web spider/4.0",42
+Bytespider,"Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.0.0 Safari/537.36",39
+ChatGPT,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot Spacecat/1.0",39
+Lighthouse,"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36 Chrome-Lighthouse",37
+"Semrush Bot","Mozilla/5.0 (compatible; SemrushBot-SI/0.97; +http://www.semrush.com/bot.html)",31
+"Generic Bot","PounceBot/5.0 (+https://pounce.ch/bot)",30
+DotBot,"Mozilla/5.0 (compatible; DotBot/1.2; +https://opensiteexplorer.org/dotbot; help@moz.com)",29
+Googlebot,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.132 Mobile Safari/537.36 (compatible; GoogleOther)",27
+InternetMeasurement,"Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/)",25
+Siteimprove,"Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0) LinkCheck by Siteimprove.com",25
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amazing-SearchBot/0.1; +https://amazing.com/bot.html) Chrome/119.0.6045.214 Safari/537.36",24
+"Sogou Spider","Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)",24
+"Yandex Bot","Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",24
+Googlebot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/144.0.7559.132 Safari/537.36",23
+"Generic Bot","Mozilla/5.0 (compatible; Paqlebot/2.0; +http://www.paqle.dk/about/paqlebot)",22
+"Facebook External Hit","facebookexternalhit/1.1;line-poker/1.0",21
+"Generic Bot","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.3; robots.txt; +https://openai.com/searchbot",20
+Googlebot,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",19
+"Sogou Spider","MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1 (compatible; Sogou web spider/4.0; +http://www.sogou.com/docs/help/webmasters.htm#07)",18
+Dataprovider,"Mozilla/5.0 (compatible; Dataprovider.com)",17
+"Generic Bot","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; ClaudeBot/1.0; +claudebot@anthropic.com)",17
+GPTBot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.3; +https://openai.com/gptbot)",16
+"DuckDuckGo Bot","'DuckDuckBot-Https/1.1; (+https://duckduckgo.com/duckduckbot)'",15
+Googlebot,"Mozilla/5.0 (X11; Linux x86_64)  AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview)  Chrome/144.0.7559.132 Safari/537.36",15
+"Generic Bot",Chrome,14
+Lighthouse,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Chrome-Lighthouse",14
+"Petal Bot","Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)",13
+Pinterest,"Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)",12
+"Generic Bot","CompanyDataHubBot/1.0 (+https://upsales.com; bot@upsales.com)",11
+"Generic Bot","Mozilla/5.0 AppleWebKit/605.1.15 (KHTML, like Gecko; compatible; iAskBot/1.0; +https://iask.ai/) Chrome/124.0.6367.171 Safari/605.1.15",11
+"Mixrank Bot","Mozilla/5.0 (compatible; MixrankBot; crawler@mixrank.com)",11
+360Spider,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0; 360Spider",10
+"Generic Bot","Mozilla/5.0 (compatible; AwarioBot/1.0; +https://awario.com/bots.html)",10
+"Yandex Bot","Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0",10
+"DuckDuckGo Bot","DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",9
+"Generic Bot","Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 YisouSpider/5.0 Safari/604.1",9
+"Generic Bot","WPMU DEV Broken Link Checker Local Engine",9
+Googlebot,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",9
+Googlebot,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/142.0.0.0 Safari/537.36",9
+Grammarly,"Grammarly/1.0 (http://www.grammarly.com)",9
+MetaJobBot,"Mozilla/5.0 (compatible; MetaJobBot; https://www.metajob.de/crawler)",9
+WikiDo,"WikiDo/1.1 (http://wikido.com; crawler@wikido.com)",9
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; AzureAI-SearchBot/1.0;",8
+"Generic Bot","AHC/2.1",7
+"Facebook External Hit","facebookexternalhit/1.1; kakaotalk-scrap/1.0; +https://devtalk.kakao.com/t/scrap/33984",6
+"Generic Bot","HatenaBlog-bot/0.02 (+https://help.hatenablog.com/entry/about-hatenablogbot)",6
+Iframely,"Iframely/1.3.1 (+https://iframely.com/docs/about) Canva",6
+Scrapy,"Scrapy/2.14.1 (+https://scrapy.org)",6
+"archive.org bot","Mozilla/5.0 (compatible; archive.org_bot +http://archive.org/details/archive.org_bot) Zeno/0344175 warc/v0.8.97",6
+"Generic Bot","LogMonitorBot/1.0",5
+"Generic Bot","Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.132 Mobile Safari/537.36 (compatible; Google-Safety; +http://www.google.com/bot.html)",5
+"Generic Bot","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.3; +https://openai.com/searchbot",5
+"Generic Bot","Observer/1.0 (+https://obsrvr.net/about; crawler@obsrvr.net)",5
+Googlebot,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.132 Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",5
+"Semantic Scholar Bot","Mozilla/5.0 (compatible) SemanticScholarBot (+https://www.semanticscholar.org/crawler)",5
+"start.me","StartmeBot/1.0 (+https://start.me/bot)",5
+BitlyBot,"bitlybot/3.0 (+http://bit.ly/)",4
+"Generic Bot","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot",4
+Googlebot,"Mozilla/5.0 (compatible; Googlebot/2.1)",4
+MojeekBot,"Mozilla/5.0 (compatible; MojeekBot/0.11; +https://www.mojeek.com/bot.html)",4
+Scrapy,"Scrapy/2.13.4 (+https://scrapy.org)",4
+Slackbot,"Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)",4
+"Discord Bot","Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)",3
+"Generic Bot","Brightbot 1.0",3
+"Generic Bot","CornerBot/1.0 (+https://github.com/corner)",3
+"Generic Bot","EasyBib AutoCite (http://autocite-info.citation-api.com/)",3
+"Generic Bot","ICDST BOT v1.0 (+https://icdst.org/mysearch/)",3
+"Generic Bot",SurliBot,3
+Rogerbot,"rogerbot/1.1 (http://moz.com/help/pro/what-is-rogerbot-, rogerbot-crawler+onpage@moz.com)",3
+Twitterbot,"Twitterbot/1.0",3
+ZumBot,"Mozilla/5.0 (Windows NT 10.0; ZumBot/1.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36",3
+zgrab,"Mozilla/5.0 zgrab/0.x",3
+Awario,"AwarioSmartBot/1.0 (+https://awario.com/bots.html; bots@awario.com)",2
+BingBot,"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",2
+"Generic Bot","HanaleiBot runid=beta-stage-integration-test",2
+"Generic Bot","Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Google-Safety; +http://www.google.com/bot.html)",2
+"Generic Bot","Mozilla/5.0 (compatible; SaaSBrowserBot/1.0; +https://saasbrowser.com/bot)",2
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ABEvalBot/0.1) Version/11.1.2 Safari/605.1.15",2
+"Generic Bot","RecordedFuture Global Inventory Crawler",2
+"Generic Bot",cubebot,2
+"Snap URL Preview Service","Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots",2
+TelegramBot,"TelegramBot (like TwitterBot)",2
+"archive.org bot","Mozilla/5.0 (compatible; archive.org_bot +http://archive.org/details/archive.org_bot) Zeno/f1e1f6c warc/v0.8.97",2
+BingBot,"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",1
+BingBot,"Mozilla/5.0 (compatible; Bingbot/2.0; +http://www.bing.com/bingbot.htm)",1
+BingBot,"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 BingPreview/1.0b",1
+ChatGPT,"Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot,gzip(gfe)",1
+"DuckDuckGo Bot","DuckDuckBot-Https/1.1; (+https://duckduckgo.com/duckduckbot)",1
+"Facebook External Hit","GoogleMessages/20.2 facebookexternalhit/1.1 Facebot Twitterbot/1.0",1
+"Generic Bot","(null)",1
+"Generic Bot","DolfeEngineCrawler (+http://dolfelive.org)",1
+"Generic Bot","EvernoteRichLinkBot/1.0 (+https://evernote.com)",1
+"Generic Bot","Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity,gzip(gfe)",1
+"Generic Bot",LinerBot,1
+"Generic Bot","Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 CrawlerBot/2.0",1
+"Generic Bot","Mozilla/5.0 (compatible; LinkChecker/10.4.0; +https://linkchecker.github.io/linkchecker/)",1
+"Generic Bot","Mozilla/5.0 (compatible; MMC Bot/1.0)",1
+"Generic Bot","Mozilla/5.0 (compatible; PlagAwareBot/3.2; +https://www.plagaware.com/bot)",1
+"Generic Bot","Mozilla/5.0 (compatible; ResearchBot/1.0; +https://kaust.edu.sa/bot)",1
+"Generic Bot","Mozilla/5.0 (compatible; SimpleAsyncPageCrawler/1.0)",1
+"Generic Bot","Mozilla/5.0 (compatible; TitanosBot/1.0)",1
+"Generic Bot","Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e YisouSpider/5.0 Safari/602.1",1
+"Generic Bot","Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25 (compatible; SiteAuditBot/0.97; +http://www.semrush.com/bot.html)",1
+"Generic Bot","Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Aranet-SearchBot/1.0; +https://aranet.ai/bot) Chrome/131.0.0.0 Safari/537.36",1
+"Generic Bot","Nextcloud Server Crawler",1
+"Generic Bot","OnyxWebCrawler/1.0 (+https://www.onyx.app)",1
+"Generic Bot","SEBot-WA",1
+"Generic Bot","SearchAtlas Bot (https://www.searchatlas.com)",1
+"Generic Bot",bot,1
+Googlebot,"AdsBot-Google (+http://www.google.com/adsbot.html)",1
+Googlebot,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/537.36 (KHTML, like Gecko, Mediapartners-Google) Chrome/89.0.4389.93 Safari/537.36",1
+Iframely,"Iframely/1.3.1 (+https://iframely.com/docs/about) Notion",1
+"Screaming Frog SEO Spider","Screaming Frog SEO Spider/22.2",1
+"Semrush Bot","Mozilla/5.0 (compatible; SemrushBot; +http://www.semrush.com/bot.html)",1
+Siteimprove,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 LinkCheck by Siteimprove.com",1
+"Trendiction Bot","Mozilla/5.0 (Windows NT 10.0; Win64; x64; trendictionbot0.5.0; trendiction search; http://www.trendiction.de/bot; please let us know of any problems; web at trendiction.com) Gecko/20100101 Firefox/125.0",1
+Turnitin,"Turnitin (https://bit.ly/2UvnfoQ)",1
+"Yandex Bot","Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Mobile/15E148 Safari/604.1 (compatible; YandexMobileBot/3.0; +http://yandex.com/bots)",1
