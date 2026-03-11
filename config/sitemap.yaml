@@ -10,6 +10,11 @@ sitemaps:
         destination: /en/sitemap.xml
         hreflang: en
         alternate: /en/{path}
+      ds:
+        source: /jmp-ds.json
+        destination: /ds/sitemap.xml
+        hreflang: ds
+        alternate: /ds/{path}
       de:
         source: /jmp-de.json
         destination: /de/sitemap.xml
