@@ -79,7 +79,7 @@ indices:
         select: head > meta[property="article:tag"]
         values: |
           attribute(el, "content") 
-      tags:
+      test:
         select: head > meta[name="test"]
         values: |
           attribute(el, "content")
