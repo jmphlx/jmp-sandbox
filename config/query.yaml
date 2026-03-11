@@ -79,7 +79,10 @@ indices:
         select: head > meta[property="article:tag"]
         values: |
           attribute(el, "content") 
-      # testing comment
+      tags:
+        select: head > meta[name="test"]
+        values: |
+          attribute(el, "content")
 
 #SPANISH CONTENT#
   jmp-es:
