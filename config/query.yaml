@@ -1187,7 +1187,7 @@ indices:
 #NEW INDICES#
 #MAIN JMP CONTENT#
 #ENGLISH CONTENT#
-  jmp-en:
+  en:
     include:
       - /en/**
     exclude:
@@ -1266,7 +1266,7 @@ indices:
           attribute(el, "content")
 
 #SPANISH CONTENT#
-  jmp-es:
+  es:
     include:
       - /es/**
     exclude:
@@ -1345,7 +1345,7 @@ indices:
           attribute(el, "content")
 
 #GERMAN CONTENT#
-  jmp-de:
+  de:
     include:
       - /de/**
     exclude:
@@ -1424,7 +1424,7 @@ indices:
           attribute(el, "content")
 
 #FRENCH CONTENT#
-  jmp-fr:
+  fr:
     include:
       - /fr/**
     exclude:
@@ -1503,7 +1503,7 @@ indices:
           attribute(el, "content")
 
 #ITALIAN CONTENT#
-  jmp-it:
+  it:
     include:
       - /it/**
     exclude:
@@ -1661,7 +1661,7 @@ indices:
           attribute(el, "content")
 
 #KOREAN CONTENT#
-  jmp-ko:
+  ko:
     include:
       - /ko/**
     exclude:
@@ -1740,7 +1740,7 @@ indices:
           attribute(el, "content")
 
 #CHINESE SIMPLIFIED CONTENT#
-  jmp-zh-hans:
+  zh-hans:
     include:
       - /zh-hans/**
     exclude:
@@ -1819,7 +1819,7 @@ indices:
           attribute(el, "content")
 
 #CHINESE TRADITIONAL CONTENT#
-  jmp-zh-hant:
+  zh-hant:
     include:
       - /zh-hant/**
     exclude:
@@ -1901,7 +1901,7 @@ indices:
 
 #SKP CONTENT#
 #SKP ENGLISH#
-  skp-en:
+  en-skp:
     include:
       - /en/statistics-knowledge-portal/**
     target: /en/skp/query-index.json
@@ -1944,7 +1944,7 @@ indices:
           attribute(el, "content")
 
 #SKP SPANISH#
-  skp-es:
+  es-skp:
     include:
       - /es/statistics-knowledge-portal/**
     target: /es/skp/query-index.json
@@ -1987,7 +1987,7 @@ indices:
           attribute(el, "content")
 
 #SKP GERMAN#
-  skp-de:
+  de-skp:
     include:
       - /de/statistics-knowledge-portal/**
     target: /de/skp/query-index.json
@@ -2030,7 +2030,7 @@ indices:
           attribute(el, "content")
 
 #SKP FRENCH#
-  skp-fr:
+  fr-skp:
     include:
       - /fr/statistics-knowledge-portal/**
     target: /fr/skp/query-index.json
@@ -2073,7 +2073,7 @@ indices:
           attribute(el, "content")
 
 #SKP ITALIAN#
-  skp-it:
+  it-skp:
     include:
       - /it/statistics-knowledge-portal/**
     target: /it/skp/query-index.json
@@ -2116,7 +2116,7 @@ indices:
           attribute(el, "content")
 
 #SKP JAPANESE#
-  skp-ja:
+  ja-skp:
     include:
       - /ja/statistics-knowledge-portal/**
     target: /ja/skp/query-index.json
@@ -2159,7 +2159,7 @@ indices:
           attribute(el, "content")
 
 #SKP KOREAN#
-  skp-ko:
+  ko-skp:
     include:
       - /ko/statistics-knowledge-portal/**
     target: /ko/skp/query-index.json
@@ -2202,7 +2202,7 @@ indices:
           attribute(el, "content")
 
 #SKP CHINESE SIMPLIFIED#
-  skp-zh-hans:
+  zh-hans-skp:
     include:
       - /zh-hans/statistics-knowledge-portal/**
     target: /zh-hans/skp/query-index.json
@@ -2245,7 +2245,7 @@ indices:
           attribute(el, "content")
 
 #SKP CHINESE TRADITIONAL#
-  skp-zh-hant:
+  zh-hant-skp:
     include:
       - /zh-hant/statistics-knowledge-portal/**
     target: /zh-hant/skp/query-index.json
@@ -2290,7 +2290,7 @@ indices:
 #END OF SKP CONTENT#
 
 #ALL CONTENT#
-  jmp-all:
+  all:
     include:
       - /**
     exclude:
