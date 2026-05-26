@@ -1583,7 +1583,7 @@ indices:
           attribute(el, "content")
 
 #JAPANESE CONTENT#
-  jmp-ja:
+  ja:
     include:
       - /ja/**
     exclude:
