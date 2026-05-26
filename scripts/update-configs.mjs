@@ -21,6 +21,8 @@ export default async function sendPostRequest(authToken, yamlText, configType) {
       body: yamlText,
     });
 
+    console.log(response);
+
     if (!response.ok) return null;
     return response;
   } catch (error) {
