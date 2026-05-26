@@ -1,4 +1,4 @@
-version: 2
+version: 3
 indices:
 #MAIN JMP CONTENT#
 #ENGLISH CONTENT#
@@ -1113,6 +1113,1191 @@ indices:
       - /drafts/**
       - /0-sandbox/**
     target: /jmp-all.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+
+#NEW INDICES#
+#MAIN JMP CONTENT#
+#ENGLISH CONTENT#
+  jmp-en:
+    include:
+      - /en/**
+    exclude:
+      - /en/drafts/**
+      - /en/sandbox/**
+      - /en/fragments/**
+    target: /en/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SPANISH CONTENT#
+  jmp-es:
+    include:
+      - /es/**
+    exclude:
+      - /es/drafts/**
+      - /es/sandbox/**
+      - /es/fragments/**
+    target: /es/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content"
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#GERMAN CONTENT#
+  jmp-de:
+    include:
+      - /de/**
+    exclude:
+      - /de/drafts/**
+      - /de/sandbox/**
+      - /de/fragments/**
+    target: /de/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#FRENCH CONTENT#
+  jmp-fr:
+    include:
+      - /fr/**
+    exclude:
+      - /fr/drafts/**
+      - /fr/sandbox/**
+      - /fr/fragments/**
+    target: /fr/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#ITALIAN CONTENT#
+  jmp-it:
+    include:
+      - /it/**
+    exclude:
+      - /it/drafts/**
+      - /it/sandbox/**
+      - /it/fragments/**
+    target: /it/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#JAPANESE CONTENT#
+  jmp-ja:
+    include:
+      - /ja/**
+    exclude:
+      - /ja/drafts/**
+      - /ja/sandbox/**
+      - /ja/fragments/**
+    target: /ja/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#KOREAN CONTENT#
+  jmp-ko:
+    include:
+      - /ko/**
+    exclude:
+      - /ko/drafts/**
+      - /ko/sandbox/**
+      - /ko/fragments/**
+    target: /ko/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#CHINESE SIMPLIFIED CONTENT#
+  jmp-zh-hans:
+    include:
+      - /zh-hans/**
+    exclude:
+      - /zh-hans/drafts/**
+      - /zh-hans/sandbox/**
+      - /zh-hans/fragments/**
+    target: /zh-hans/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#CHINESE TRADITIONAL CONTENT#
+  jmp-zh-hant:
+    include:
+      - /zh-hant/**
+    exclude:
+      - /zh-hant/drafts/**
+      - /zh-hant/sandbox/**
+      - /zh-hant/fragments/**
+    target: /zh-hant/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      offDateTime:
+        select: head > meta[name="offdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDateTime:
+        select: head > meta[name="eventdatetime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayTime:
+        select: head > meta[name="eventdisplaytime"]
+        value: |
+          attribute(el, "content")
+      eventDisplayLabel:
+        select: head > meta[name="eventdisplaylabel"]
+        value: |
+          attribute(el, "content")
+      bookTypeTitle:
+        select: head > meta[name="booktypetitle"]
+        value: |
+          attribute(el, "content")
+      bookPublishDate:
+        select: head > meta[name="bookpublishdate"]
+        value: |
+          attribute(el, "content")
+      bookAuthor:
+        select: head > meta[name="bookauthor"]
+        value: |
+          attribute(el, "content")
+      displayLabel:
+        select: head > meta[name="displaylabel"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#END OF MAIN JMP CONTENT#
+
+#SKP CONTENT#
+#SKP ENGLISH#
+  skp-en:
+    include:
+      - /en/statistics-knowledge-portal/**
+    target: /en/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP SPANISH#
+  skp-es:
+    include:
+      - /es/statistics-knowledge-portal/**
+    target: /es/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP GERMAN#
+  skp-de:
+    include:
+      - /de/statistics-knowledge-portal/**
+    target: /de/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP FRENCH#
+  skp-fr:
+    include:
+      - /fr/statistics-knowledge-portal/**
+    target: /fr/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP ITALIAN#
+  skp-it:
+    include:
+      - /it/statistics-knowledge-portal/**
+    target: /it/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP JAPANESE#
+  skp-ja:
+    include:
+      - /ja/statistics-knowledge-portal/**
+    target: /ja/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP KOREAN#
+  skp-ko:
+    include:
+      - /ko/statistics-knowledge-portal/**
+    target: /ko/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP CHINESE SIMPLIFIED#
+  skp-zh-hans:
+    include:
+      - /zh-hans/statistics-knowledge-portal/**
+    target: /zh-hans/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#SKP CHINESE TRADITIONAL#
+  skp-zh-hant:
+    include:
+      - /zh-hant/statistics-knowledge-portal/**
+    target: /zh-hant/skp/query-index.json
+    properties:
+      author:
+        select: head > meta[name="author"]
+        value: |
+          attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, "content"), "https:\/\/[^/]+(/.*)")
+      description:
+        select: head > meta[name="description"]
+        value: |
+          attribute(el, "content")
+      displayDescription:
+        select: head > meta[name="displaydescription"]
+        value: |
+          attribute(el, "content")
+      releaseDate:
+        select: head > meta[name="releasedate"]
+        value: |
+          attribute(el, "content")
+      redirectTarget:
+        select: head > meta[name="redirecttarget"]
+        value: |
+          attribute(el, "content")
+      displayImage:
+        select: head > meta[name="displayimage"]
+        value: |
+          attribute(el, "content")
+      tags:
+        select: head > meta[property="article:tag"]
+        values: |
+          attribute(el, "content")
+
+#END OF SKP CONTENT#
+
+#ALL CONTENT#
+  jmp-all:
+    include:
+      - /**
+    exclude:
+      - /sandbox/**
+      - /drafts/**
+      - /0-sandbox/**
+    target: /all/query-index.json
     properties:
       author:
         select: head > meta[name="author"]
