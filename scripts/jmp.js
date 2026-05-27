@@ -140,6 +140,7 @@ function getLanguageFooter(isSKP = null) {
  * @returns {string} path to language index
  */
 function getLanguageIndex(overwriteLanguage = null) {
+  console.log('add logging');
   if (overwriteLanguage) {
     return isLanguageSupported(overwriteLanguage) ? `/${overwriteLanguage}/query-index.json` : '/en/query-index.json';
   }
