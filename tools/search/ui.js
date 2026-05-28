@@ -5,6 +5,10 @@ import {
 } from '../../scripts/helper.js';
 import { getCurrentVersion } from '../restore-version/formatter.js';
 
+import {
+  updatePublishStatus,
+} from './publish.js';
+
 const DEFAULT_PROP_LIST = ['style', 'options'];
 
 // escape regex metacharacters in the variable
@@ -17,6 +21,11 @@ function makeLookbehindRegex(keyword, flags = 'gi') {
   const esc = escapeRegex(keyword);
   // Note: lookbehind must be supported in your runtime
   return new RegExp(`(?<=${esc}:)\\S+`, flags);
+}
+
+function highlightKeyword(text, keyword) {
+  const regex = new RegExp(`(${escapeRegex(keyword)})`, 'gi');
+  return text.replaceAll(regex, '<mark>$1</mark>');
 }
 
 function updateSearchTerms(searchInputField, category, termValue) {
@@ -187,7 +196,7 @@ function updateActionMessage(resultsContainer, result) {
   resultsContainer.prepend(actionMessage);
 }
 
-function createResultItem(item) {
+function createResultItem(item, highlightTerm) {
   const resultItem = createTag('div', { class: 'result-item' });
   const resultHeader = createTag('div', {
     class: 'result-header',
@@ -225,6 +234,7 @@ function createResultItem(item) {
       class: `html-result ${item.classStyle}`,
     });
     const clone = el.cloneNode(true);
+    clone.innerHTML = highlightKeyword(clone.innerHTML, highlightTerm);
     li.append(clone);
     resultText.append(li);
   });
@@ -302,16 +312,15 @@ function writeOutResults(results, queryString, queryObject, duration) {
   const resultsData = document.createElement('div');
 
   const urlList = [];
-  const publishedUrlList = [];
 
   const resultsList = document.createElement('div');
   resultsList.classList.add('results-list');
   results.forEach((item) => {
-    const resultItem = createResultItem(item);
+    const resultItem = createResultItem(item, queryObject.keyword);
     resultsList.append(resultItem);
     urlList.push(`${DA_CONSTANTS.previewUrl}${item.pagePath}`);
-    if (getPublishStatus(item.publishStatus) === 'published') {
-      publishedUrlList.push(`${DA_CONSTANTS.previewUrl}${item.pagePath}`);
+    if (getPublishStatus(item.publishStatus) === 'loading') {
+      updatePublishStatus(item, resultItem);
     }
   });
 
@@ -326,15 +335,6 @@ function writeOutResults(results, queryString, queryObject, duration) {
   const copyContainer = createTag('span', {
     id: 'copy-to-clipboard',
   });
-
-  const copyPublishedButton = createTag('p', {
-    class: 'button-container',
-  });
-  copyPublishedButton.textContent = 'Copy Published Result URLs To Clipboard';
-  copyPublishedButton.addEventListener('click', () => {
-    copyToClipboard(copyPublishedButton, publishedUrlList.join('\n'), 'Copied');
-  });
-  copyContainer.append(copyPublishedButton);
 
   const copyAllButton = createTag('p', {
     class: 'button-container',

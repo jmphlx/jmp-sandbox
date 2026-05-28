@@ -3,11 +3,11 @@ import DA_SDK from 'https://da.live/nx/utils/sdk.js';
 // eslint-disable-next-line import/no-unresolved
 import { crawl } from 'https://da.live/nx/public/utils/tree.js';
 import addAppAccessControl from '../access-control/access-control.js';
+import { getPublishStatusObj, setToken } from './publish.js';
+
 import {
-  getPageStatus,
   getPublishStatus,
   createVersion,
-  createRateLimiter,
   DA_CONSTANTS,
   toLowerCaseObject,
 } from '../../scripts/helper.js';
@@ -35,7 +35,7 @@ import {
 } from './ui.js';
 
 const daSourceUrl = 'https://admin.da.live/source';
-const defaultpath = '/jmphlx/jmp-sandbox/en';
+const defaultpath = '/jmphlx/jmp-da/en';
 const pathPrefix = `/${DA_CONSTANTS.org}/${DA_CONSTANTS.repo}`;
 let actions;
 let token;
@@ -44,11 +44,6 @@ let token;
 $.expr[':'].icontains = function (elem, i, match) {
   return $(elem).text().toLowerCase().includes(match[3].toLowerCase());
 };
-
-/**
- * https://admin.hlx.page/ only supports 10 requests per second, but need to space it out to 3 seconds.
-*/
-const rateLimit = createRateLimiter(10, 3000);
 
 class SearchResult {
   constructor(item, elements, classStyle, dom, publishStatus) {
@@ -61,10 +56,6 @@ class SearchResult {
     this.classStyle = classStyle;
     this.publishStatus = publishStatus;
   }
-}
-
-async function getPublishStatusObj(path) {
-  return rateLimit(() => getPageStatus(path, token));
 }
 
 function clearEventListeners() {
@@ -215,7 +206,6 @@ async function handleSearch(item, queryObject, matching) {
         return field.children.length === 0
           && field.textContent.trim().toLowerCase() === propertyName;
       });
-      console.log(foundProperties);
       foundProperties.forEach((prop) => {
         elements.push(prop.parentElement.parentElement);
       });
@@ -265,9 +255,12 @@ async function handleSearch(item, queryObject, matching) {
       publish status filter. If it doesn't match, then
       the page is not a match. If it does, then
       check for keyword. */
-      const pageStatusObj = await getPublishStatusObj(getPagePathFromFullUrl(item.path));
-      const publishStatus = getPublishStatus(pageStatusObj);
+      let pageStatusObj = null;
+      let publishStatus = null;
+
       if (queryObject.scope.status) {
+        pageStatusObj = await getPublishStatusObj(getPagePathFromFullUrl(item.path), token);
+        publishStatus = getPublishStatus(pageStatusObj);
         if (publishStatus === queryObject.scope.status && queryObject.keyword) {
           // look for keyword.
           await filterForKeyword(pageStatusObj);
@@ -411,14 +404,13 @@ async function getConfigurations() {
 window.addEventListener('message', (event) => {
   if (event.origin === 'http://localhost:3000'
     || event.origin === 'https://www.jmp.com'
-    || event.origin === 'https://main--jmp-sandbox--jmphlx.aem.live') {
+    || event.origin === 'https://main--jmp-da--jmphlx.aem.live') {
     const singleInput = document.getElementById('page-path-input');
     if (event.data.length) {
       singleInput.value = event.data;
     }
   }
   if (event.origin === 'https://da.live') {
-    console.log('got message from DA');
     const iframe = document.querySelector('iframe');
     iframe.contentWindow.postMessage(event.data);
   }
@@ -484,7 +476,7 @@ async function init() {
   const sdk = await DA_SDK;
   actions = sdk.actions;
   token = sdk.token;
-  console.log(token);
+  setToken(token);
 
   constructPageViewer();
 
@@ -518,7 +510,6 @@ async function init() {
 
     // Get Search Terms.
     const queryObject = getQuery(caseSensitiveFlag);
-    console.log(queryObject);
 
     // Need to validate query here. and error early.
 
@@ -595,7 +586,6 @@ async function init() {
     });
     const exportSubmitButton = document.getElementById('export-submit-button');
     exportSubmitButton.addEventListener('click', () => {
-      console.log(window.searchResults);
       exportToCSV(token);
     });
 
