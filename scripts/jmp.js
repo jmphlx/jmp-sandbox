@@ -141,9 +141,10 @@ function getLanguageFooter(isSKP = null) {
  */
 function getLanguageIndex(overwriteLanguage = null) {
   if (overwriteLanguage) {
-    return isLanguageSupported(overwriteLanguage) ? `/jmp-${overwriteLanguage}.json` : '/jmp-en.json';
+    return isLanguageSupported(overwriteLanguage) ? `/${overwriteLanguage}/query-index.json` : '/en/query-index.json';
   }
-  return isLanguageSupported ? `/jmp-${lang}.json` : '/jmp-en.json';
+
+  return isLanguageSupported ? `/${lang}/query-index.json` : '/en/query-index.json';
 }
 
 /**
@@ -152,7 +153,7 @@ function getLanguageIndex(overwriteLanguage = null) {
  * @returns {string} path to language index
  */
 function getSKPLanguageIndex() {
-  return isLanguageSupported ? `/skp-${lang}.json` : '/skp-en.json';
+  return isLanguageSupported ? `/${lang}/skp/query-index.json` : '/en/skp/query-index.json';
 }
 
 /**
