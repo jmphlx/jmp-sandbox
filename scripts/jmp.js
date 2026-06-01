@@ -136,14 +136,14 @@ function getLanguageFooter(isSKP = null) {
 
 /**
  * Returns the path of the appropriate index based on page language.
- * Default to 'en' if language isn't found.
+ * Default to 'en' if language isn't found. 
  * @returns {string} path to language index
  */
 function getLanguageIndex(overwriteLanguage = null) {
-  console.log('add logging');
   if (overwriteLanguage) {
     return isLanguageSupported(overwriteLanguage) ? `/${overwriteLanguage}/query-index.json` : '/en/query-index.json';
   }
+
   return isLanguageSupported ? `/${lang}/query-index.json` : '/en/query-index.json';
 }
 
