@@ -1,4 +1,4 @@
-version: 2
+version: 3
 
 sitemaps:
   site:
@@ -6,47 +6,47 @@ sitemaps:
     lastmod: YYYY-MM-DD
     languages:
       en:
-        source: /jmp-en.json
+        source: /en/query-index.json
         destination: /en/sitemap.xml
         hreflang: en
         alternate: /en/{path}
       de:
-        source: /jmp-de.json
+        source: /de/query-index.json
         destination: /de/sitemap.xml
         hreflang: de
         alternate: /de/{path}
       fr:
-        source: /jmp-fr.json
+        source: /fr/query-index.json
         destination: /fr/sitemap.xml
         hreflang: fr
         alternate: /fr/{path}
       it:
-        source: /jmp-it.json
+        source: /it/query-index.json
         destination: /it/sitemap.xml
         hreflang: it
         alternate: /it/{path}
       es:
-        source: /jmp-es.json
+        source: /es/query-index.json
         destination: /es/sitemap.xml
         hreflang: es
         alternate: /es/{path}
       ko:
-        source: /jmp-ko.json
+        source: /ko/query-index.json
         destination: /ko/sitemap.xml
         hreflang: ko
         alternate: /ko/{path}
       ja:
-        source: /jmp-ja.json
+        source: /ja/query-index.json
         destination: /ja/sitemap.xml
         hreflang: ja
         alternate: /ja/{path}
       zh-hant:
-        source: /jmp-zh-hant.json
+        source: /zh-hant/query-index.json
         destination: /zh-hant/sitemap.xml
         hreflang: zh-hant
         alternate: /zh-hant/{path}
       zh-hans:
-        source: /jmp-zh-hans.json
+        source: /zh-hans/query-index.json
         destination: /zh-hans/sitemap.xml
         hreflang: zh-hans
         alternate: /zh-hans/{path}
