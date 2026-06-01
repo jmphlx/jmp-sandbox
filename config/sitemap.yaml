@@ -2,7 +2,7 @@ version: 3
 
 sitemaps:
   site:
-    origin: https://www.jmp.com
+    origin: https://main--jmp-sandbox--jmphlx.aem.live
     lastmod: YYYY-MM-DD
     languages:
       en:
