@@ -10,3 +10,10 @@ helix-importer-ui
 .code
 .vscodetest/screenshots/
 test/screenshots/*
+__pycache__/
+*.py[cod]
+import-work/
+
+.hlx/.da-token*.json
+
+content
