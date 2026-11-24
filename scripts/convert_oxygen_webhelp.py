@@ -233,6 +233,7 @@ class RenderContext:
     unhandled: Counter
     page_assets: set[str] = field(default_factory=set)
     child_by_node: dict = field(default_factory=dict)
+    table_depth: int = 0
     child_by_anchor: dict = field(default_factory=dict)
     embedded_bytes: int = 0
     page_links: int = 0
@@ -687,9 +688,30 @@ def render_section(node: ET.Element, context: RenderContext) -> str:
 
 
 def render_table(node: ET.Element, context: RenderContext) -> str:
+    """Render a DITA table as a DA table block: a one-cell table headed "Table" that holds the real table.
+
+    Tables nested inside another table's cell are left as plain tables, since the block cannot nest twice.
+    """
+    title = node.find("title")
+    nested = context.table_depth > 0
+    caption = ""
+    if not nested and title is not None and text_of(title):
+        # A top-level caption sits above the block as styled text; the block cannot hold it.
+        caption = f"<p><strong>{render_inline(title, context).strip()}</strong></p>"
+    context.table_depth += 1
+    try:
+        table = render_plain_table(node, context, nested)
+    finally:
+        context.table_depth -= 1
+    if nested:
+        return table
+    return f"{caption}<table><tr><th>Table</th></tr><tr><td>{table}</td></tr></table>"
+
+
+def render_plain_table(node: ET.Element, context: RenderContext, with_caption: bool) -> str:
     parts = [f"<table{id_attr(node, context)}>"]
     title = node.find("title")
-    if title is not None and text_of(title):
+    if with_caption and title is not None and text_of(title):
         parts.append(f"<caption>{render_inline(title, context).strip()}</caption>")
     for group in node.findall("tgroup") or [node]:
         columns = {}
